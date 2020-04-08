@@ -3,6 +3,7 @@ import ffmpeg
 
 parser = argparse.ArgumentParser(description='Sync your mp4 file to the beat of a mp3.')
 parser.add_argument('-v', metavar='--videofile', type=str, help='The videofile you want to sync')
+parser.add_argument('-m', metavar='--musicfile', type=str, help='The musicfile you want to sync to')
 args = parser.parse_args()
 
 stream = ffmpeg.input(args.v)
